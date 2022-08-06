@@ -1,0 +1,333 @@
+/*HEADER & NAV BAR STYLES*/
+
+body{
+    margin: 0;
+     padding: 0;
+     font-family: 'Noto Serif', serif;
+}
+.logo-image{
+    width: 300px;
+    height: 65px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+ .navigation {
+     height: 65px;
+     background: #ffffff;
+}
+ .brand {
+     position: absolute;
+     padding-left: 20px;
+     float: left;
+     line-height: 65px;
+
+}
+ .brand a, .brand a:visited {
+     color: #ffffff;
+     text-decoration: none;
+}
+ .nav-container {
+     max-width: 1000px;
+     margin: 0 auto;
+}
+ nav {
+     float: right;
+}
+ nav ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+ nav ul li {
+     float: left;
+     position: relative;
+}
+ nav ul li a,nav ul li a:visited {
+     display: block;
+     padding: 0 20px;
+     line-height: 55px;
+     color: #318162;
+     background: #fff ;
+     text-decoration: none;
+}
+ nav ul li a{
+     background: transparent;
+     color: #318162;
+}
+ nav ul li a:hover, nav ul li a:visited:hover {
+     background: #318162;
+     color: #ffffff;
+}
+ .navbar-dropdown li a{
+     background: #318162;
+}
+ nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+     padding-left: 4px;
+     content: ' \025BE';
+}
+ nav ul li ul li {
+     min-width: 190px;
+}
+ nav ul li ul li a {
+     padding: 15px;
+     line-height: 20px;
+}
+ .navbar-dropdown {
+     position: absolute;
+     display: none;
+     z-index: 1;
+     background: #fff;
+     box-shadow: 0 0 35px 0 rgba(0,0,0,0.25);
+}
+/* Mobile navigation */
+ .nav-mobile {
+     display: none;
+     position: absolute;
+     top: 0;
+     right: 0;
+     background: transparent;
+     height: 55px;
+     width: 70px;
+}
+ @media only screen and (max-width: 800px) {
+     .nav-mobile {
+         display: block;
+    }
+     nav {
+         width: 100%;
+         padding: 55px 0 15px;
+    }
+     nav ul {
+         display: none;
+    }
+     nav ul li {
+         float: none;
+    }
+     nav ul li a {
+         padding: 15px;
+         line-height: 20px;
+         background: #262626;
+    }
+     nav ul li ul li a {
+         padding-left: 30px;
+    }
+     .navbar-dropdown {
+         position: static;
+}
+ @media screen and (min-width:800px) {
+     .nav-list {
+         display: block !important;
+    }
+}
+ #navbar-toggle {
+     position: absolute;
+     left: 18px;
+     top: 15px;
+     cursor: pointer;
+     padding: 10px 35px 16px 0px;
+}
+ #navbar-toggle span, #navbar-toggle span:before, #navbar-toggle span:after {
+     cursor: pointer;
+     border-radius: 1px;
+     height: 3px;
+     width: 30px;
+     background: #318162;
+     position: absolute;
+     display: block;
+     content: '';
+     transition: all 300ms ease-in-out;
+}
+ #navbar-toggle span:before {
+     top: -10px;
+}
+ #navbar-toggle span:after {
+     bottom: -10px;
+}
+ #navbar-toggle.active span {
+     background-color: transparent;
+}
+ #navbar-toggle.active span:before, #navbar-toggle.active span:after {
+     top: 0;
+}
+ #navbar-toggle.active span:before {
+     transform: rotate(45deg);
+}
+ #navbar-toggle.active span:after {
+     transform: rotate(-45deg);
+}
+ }
+
+/*HERO SECTION STYLE*/
+
+#thehero {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-image: url(../images/iguana.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.the-inner {
+    background-color: rgba(55,55,48, 0.5);
+    width: 600px;
+    padding: 10px;
+    margin-left: 150px
+}
+
+.the-inner h1{
+    color: #FEAB79;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 2.1rem;
+
+}
+
+.the-inner p {
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.1rem;  
+}
+
+.the-inner button {
+    padding: 15px;
+    padding-bottom: 20px;;
+    color: #ffffff;
+    background-color: #318162;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Noto Serif', serif;
+    font-variant-caps: all-small-caps;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+/*CARDS MENU*/
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 1%;
+  max-width: 310px;
+  min-width: 250px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.cards * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.cards img {
+  max-width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+
+.cards figcaption {
+  padding: 25px 20px 25px;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.cards figcaption:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  content: '';
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.cards h3,
+.cards a {
+  margin: 0;
+  padding: 0;
+}
+
+.cards h3 {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-bottom: 5px;
+}
+
+.cards a {
+  font-size: 0.8em;
+  line-height: 1.6em;
+  margin-bottom: 0px;
+  color: #ffffff;
+}
+
+.cards:hover img,
+.cards.hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*APP CALL TO ACTION*/
+
+/*FOOTER SECTION*/
+
+.footer {
+    background-color: #0E0E0C;
+    display: grid;
+    margin: 0px;
+    padding-top: 50px;
+    padding-left: 0px;
+    grid-template-rows: 80px 80px 80px;
+    grid-template-columns: 400px 400px 400px;
+    justify-content: center;
+}
+.copywright {
+    background-color: #0E0E0C;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+f1 {
+    color: white;
+    font-weight: 700;
+    font-size: 16pt;
+}
+f2 {
+    color:white;
+    font-weight: 700;
+    font-size: 12pt;
+}
+f3 {
+    color:white;
+    font-weight: 500;
+    font-size: 10pt;
+}
+f4 {
+    color:white;
+    font-weight: 500;
+    font-size: 10pt;
+    text-decoration: underline;
+}
